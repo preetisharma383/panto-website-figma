@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panto Interior</title>
+  <link rel="stylesheet" href="./css/Landingpage.css" />
+  <link rel="stylesheet" href="./css/whychooseus.css">
+  <link rel="stylesheet" href="./css/testimonial.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/Responsive.css">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    integrity="sha512-xh6ev5j0y..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <button class="menu-toggle" aria-controls="nav-links" aria-expanded="false">
+        <i class="fas fa-bars"></i>
+    </button>
+    <div class="logo">Panto</div>
+    
+    <nav>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#">Furniture</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="cart-icon">
+      <i class="fas fa-shopping-cart"></i>
+    </div>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Make Your Interior More<br> Minimalistic & Modern</h1>
+      <p>Turn your room with panto into a lot
+        more minimalist <br>and modern with ease and speed</p>
+      <div class="search-bar">
+        <input type="text" placeholder="Search furniture" /><button><i class="fas fa-search"></i></button>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- why choose us -->
+  <section class="why-choose-us">
+    <div class="container">
+      <div class="heading">
+        <h2>Why Choosing Us
+        </h2>
+      </div>
+      <div class="features">
+        <div class="feature">
+          <h3>Luxury facilities</h3>
+          <p>The advantage of hiring a workspace with us is that gives you comfortable service and all-around
+            facilities.</p>
+          <a href="#" class="more-info">More Info <span>&rarr;</span></a>
+        </div>
+        <div class="feature">
+          <h3>Affordable Price</h3>
+          <p>You can get a workspace of the highest quality at an affordable price and still enjoy the facilities that
+            are only here.</p>
+          <a href="#" class="more-info">More Info <span>&rarr;</span></a>
+        </div>
+        <div class="feature">
+          <h3>Many Choices</h3>
+          <p>We provide many unique workspace choices so that you can choose the workspace to your liking.</p>
+          <a href="#" class="more-info">More Info <span>&rarr;</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Best seller -->
+  <section id="best-selling-products-section" class="best-selling-products-section">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+      /* Section Container */
+      .best-selling-products-section {
+        font-family: 'Inter', sans-serif;
+        background-color: #f8f9fa;
+        padding: 4rem 1rem;
+        max-width: 1200px;
+        margin: 2rem auto;
+        border-radius: 2rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* Heading */
+      .best-selling-products-section .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin-bottom: 2.5rem;
+      }
+
+      /* Category Tabs */
+      .best-selling-products-section .category-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-bottom: 2.5rem;
+        flex-wrap: wrap;
+      }
+
+      .best-selling-products-section .category-tab {
+        padding: 0.75rem 1.5rem;
+        border-radius: 9999px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        border: none;
+        outline: none;
+      }
+
+      .best-selling-products-section .category-tab.active {
+        background-color: #e2e8f0;
+        color: #2d3748;
+      }
+
+      .best-selling-products-section .category-tab:not(.active) {
+        background-color: #f1f5f9;
+        color: #64748b;
+      }
+
+      /* Carousel Arrows */
+      .best-selling-products-section .carousel-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3rem;
+        height: 3rem;
+        background-color: white;
+        border-radius: 50%;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+        transition: transform 0.3s ease-in-out;
+        border: none;
+        outline: none;
+      }
+
+      .best-selling-products-section .carousel-nav:hover {
+        transform: translateY(-50%) scale(1.05);
+      }
+
+      .best-selling-products-section .carousel-nav.left {
+        left: 1rem;
+      }
+
+      .best-selling-products-section .carousel-nav.right {
+        right: 1rem;
+      }
+
+      /* Product Carousel */
+      .best-selling-products-section .product-carousel {
+        display: flex;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        padding: 1rem 0;
+        gap: 2rem;
+      }
+
+      /* Product Card */
+      .best-selling-products-section .product-card {
+        flex: 0 0 100%;
+        max-width: 280px;
+        background-color: white;
+        border-radius: 1.5rem;
+        padding: 1.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .best-selling-products-section .product-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .best-selling-products-section .product-card img {
+        width: 220px;
+        height: 220px;
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .best-selling-products-section .product-card .category {
+        font-size: 0.875rem;
+        color: #718096;
+        font-weight: 500;
+      }
+
+      .best-selling-products-section .product-card .card-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 0.5rem;
+      }
+
+      .best-selling-products-section .product-card .card-bottom h3 {
+        font-size: 1.125rem;
+        font-weight: 600;
+        color: #2d3748;
+      }
+
+      .best-selling-products-section .product-card .card-bottom .add-btn {
+        background-color: #1a202c;
+        color: white;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+
+      .best-selling-products-section .product-card .card-bottom .add-btn:hover {
+        background-color: #2d3748;
+      }
+
+      .best-selling-products-section .product-card .rating {
+        color: #f6ad55;
+        font-size: 1.25rem;
+        margin-top: 0.5rem;
+      }
+
+      .best-selling-products-section .product-card .price {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: #1a202c;
+        margin-top: 0.5rem;
+      }
+
+      /* Font Awesome for Icons */
+      @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+      /* Responsive design */
+      @media (min-width: 768px) {
+        .best-selling-products-section .product-carousel {
+          flex-wrap: nowrap;
+        }
+
+        .best-selling-products-section .product-card {
+          flex: 0 0 calc(25% - 1.5rem);
+        }
+      }
+
+      .best-selling-products-section .view-all-link {
+        text-align: center;
+        margin-top: 2rem;
+      }
+
+      .best-selling-products-section .view-all-link a {
+        color: #f6ad55;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.3s;
+      }
+
+      .best-selling-products-section .view-all-link a:hover {
+        color: #dd6b20;
+      }
+    </style>
+
+    <!-- Section Content -->
+    <h2 class="section-title">Best Selling Product</h2>
+
+    <!-- Category Tabs -->
+    <div class="category-tabs">
+      <button class="category-tab active">Chair</button>
+      <button class="category-tab">Beds</button>
+      <button class="category-tab">Sofa</button>
+      <button class="category-tab">Lamp</button>
+    </div>
+
+    <!-- Product Carousel -->
+    <div class="product-carousel-container">
+      <button id="prev-btn" class="carousel-nav left">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+
+      <div id="product-carousel" class="product-carousel">
+        <!-- Product Card 1 -->
+        <div class="product-card">
+          <img src="./img/chair1.png" alt="Sakarias Armchair">
+          <div class="category">Chair</div>
+          <div class="card-bottom">
+            <h3>Sakarias Armchair</h3>
+            <div class="add-btn"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="rating">★★★★★</div>
+          <div class="price">$392</div>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="product-card">
+          <img src="./img/chair2.png" alt="Baltsar Chair">
+          <div class="category">Chair</div>
+          <div class="card-bottom">
+            <h3>Baltsar Chair</h3>
+            <div class="add-btn"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="rating">★★★★★</div>
+          <div class="price">$299</div>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="product-card">
+          <img src="./img/chair3.png" alt="Anjay Chair">
+          <div class="category">Chair</div>
+          <div class="card-bottom">
+            <h3>Anjay Chair</h3>
+            <div class="add-btn"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="rating">★★★★★</div>
+          <div class="price">$519</div>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="product-card">
+          <img src="./img/chair4.png" alt="Nyantuy Chair">
+          <div class="category">Chair</div>
+          <div class="card-bottom">
+            <h3>Nyantuy Chair</h3>
+            <div class="add-btn"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="rating">★★★★★</div>
+          <div class="price">$921</div>
+        </div>
+
+      </div>
+
+      <button id="next-btn" class="carousel-nav right">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <!-- "View All" link -->
+    <div class="view-all-link">
+      <a href="#">
+        View All
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+
+    <!-- JavaScript for Carousel -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const carousel = document.getElementById('product-carousel');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        const scrollAmount = 320; // Width of a card + gap
+
+        prevBtn.addEventListener('click', () => {
+          carousel.scrollLeft -= scrollAmount;
+        });
+
+        nextBtn.addEventListener('click', () => {
+          carousel.scrollLeft += scrollAmount;
+        });
+      });
+    </script>
+  </section>
+  <!-- Experience section -->
+  <section id="best-experience-section">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+      /* Overall section container */
+      .best-experience-container {
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0rem;
+        background-color: #ffffff;
+        max-width: 1200px;
+        margin: 2rem auto;
+        border-radius: 2rem;
+        gap: 4rem;
+      }
+
+      /* Image side of the section */
+      .best-experience-image {
+        position: relative;
+        flex: 1;
+        max-width: 50%;
+      }
+
+      .best-experience-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 2rem;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 2;
+      }
+
+      .best-experience-image::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: 100%;
+        height: 100%;
+        background-color: #f1f5f9;
+        /* The subtle background color */
+        border-radius: 2rem;
+        z-index: 1;
+      }
+
+      /* Text content side */
+      .best-experience-content {
+        flex: 1;
+        max-width: 50%;
+      }
+
+      .best-experience-content .tag {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #dd6b20;
+        /* Orange color */
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .best-experience-content h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #1a202c;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
+
+      .best-experience-content p {
+        font-size: 1rem;
+        color: #4a5568;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+
+      .best-experience-content .more-info-link {
+        font-weight: 600;
+        color: #dd6b20;
+        /* Orange color */
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.3s;
+      }
+
+      .best-experience-content .more-info-link:hover {
+        color: #b7520e;
+      }
+
+      /* Font Awesome for the arrow icon */
+      @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .best-experience-container {
+          flex-direction: column;
+          padding: 2rem 1rem;
+        }
+
+        .best-experience-image,
+        .best-experience-content {
+          max-width: 100%;
+        }
+
+        .best-experience-image::before {
+          display: none;
+        }
+
+        .best-experience-content h2 {
+          font-size: 2rem;
+        }
+      }
+    </style>
+
+    <div class="best-experience-container">
+      <!-- Left side: Image with a subtle background -->
+      <div class="best-experience-image">
+        <!-- Placeholder image for the couch -->
+        <img src="./img/experience.jpg" alt="A modern living room with a couch and a plant.">
+      </div>
+
+      <!-- Right side: Text content -->
+      <div class="best-experience-content">
+        <span class="tag">EXPERIENCES</span>
+        <h2>We Provide You The <br> Best Experience</h2>
+        <p>You don't have to worry about the result because all of these interiors are made by people who are
+          professionals in their fields with an elegant and luxurious style and with premium quality materials.</p>
+        <a href="#" class="more-info-link">
+          More info
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+
+  </section>
+  <!-- materials section -->
+  <section id="materials-section">
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+      /* Overall section container */
+      .materials-container {
+        font-family: 'Inter', sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 1px;
+        background-color: #ffffff;
+        max-width: 1200px;
+        margin: 2rem auto;
+        border-radius: 2rem;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        gap: 4rem;
+      }
+
+      /* Text content side */
+      .materials-content {
+        flex: 1;
+        max-width: 40%;
+      }
+
+      .materials-content .tag {
+        font-size: 1rem;
+        font-weight: 600;
+        color: #dd6b20;
+        /* Orange color */
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .materials-content h2 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: #1a202c;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+      }
+
+      .materials-content p {
+        font-size: 1rem;
+        color: #4a5568;
+        line-height: 1.6;
+        margin-bottom: 2rem;
+      }
+
+      .materials-content .more-info-link {
+        font-weight: 600;
+        color: #dd6b20;
+        /* Orange color */
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        transition: color 0.3s;
+      }
+
+      .materials-content .more-info-link:hover {
+        color: #b7520e;
+      }
+
+      /* Image gallery side */
+      .materials-image-gallery {
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 1.5rem;
+        position: relative;
+      }
+
+      /* Main Image Container */
+      .materials-image-gallery .main-image {
+        grid-row: 1 / 3;
+        grid-column: 2 / 3;
+        position: relative;
+      }
+
+      /* The actual image */
+      .materials-image-gallery .main-image img {
+        width: 112%;
+        height: 407px;
+        /* border-radius: 2rem; */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        position: relative;
+        top: 3rem;
+        right: 57px;
+        z-index: 2;
+      }
+
+      /* The subtle background box behind the main image */
+      .materials-image-gallery .main-image::before {
+        content: '';
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        width: 100%;
+        height: 100%;
+        background-color: #f1f5f9;
+        /* The subtle background color */
+        border-radius: 0.5rem;
+        z-index: 1;
+        /* Place the background behind the image */
+      }
+
+      .materials-image-gallery .top-left-image {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+      }
+
+      .materials-image-gallery .bottom-left-image {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+      }
+
+      .materials-image-gallery .small-image {
+        width: 236px;
+        height: 263px;
+        border-radius: 1.5rem;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Font Awesome for the arrow icon */
+      @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+      /* Responsive design */
+      @media (max-width: 768px) {
+        .materials-container {
+          flex-direction: column;
+          padding: 2rem 1rem;
+        }
+
+        .materials-content,
+        .materials-image-gallery {
+          max-width: 100%;
+        }
+
+        .materials-content h2 {
+          font-size: 2rem;
+        }
+
+        .materials-image-gallery {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+        }
+
+        .materials-image-gallery .main-image {
+          grid-row: auto;
+          grid-column: auto;
+        }
+
+        .materials-image-gallery .main-image::before {
+          display: none;
+        }
+
+        .materials-image-gallery .top-left-image,
+        .materials-image-gallery .bottom-left-image {
+          display: none;
+          /* Hide small images on mobile for a cleaner look */
+        }
+      }
+    </style>
+
+    <div class="materials-container">
+      <!-- Left side: Text content -->
+      <div class="materials-content">
+        <span class="tag">MATERIALS</span>
+        <h2>Very Serious <br> Materials For Making <br> Furniture</h2>
+        <p>Because pants was very serious about designing furniture for our environment, using a very expensive and
+          famous capital but at a relatively low price.</p>
+        <a href="#" class="more-info-link">
+          More info
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Right side: Image gallery -->
+      <div class="materials-image-gallery">
+        <div class="top-left-image">
+          <img src="./img/img1.jpg" alt="Furniture Image 1" class="small-image">
+        </div>
+        <div class="bottom-left-image">
+          <img src="./img/img2.jpg" alt="Furniture Image 2" class="small-image">
+        </div>
+        <div class="main-image">
+          <img src="./img/img3.jpg" alt="A modern dining room with wooden chairs and table." class="image3">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- client section testimonial -->
+<section class="testimonials">
+    <div class="subtitle">TESTIMONIALS</div>
+    <div class="title">Our Client Reviews</div>
+
+    <div class="testimonial-container">
+        <!-- Left Arrow -->
+        <div class="arrow">&#8592;</div>
+
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-image" style="background-image: url('./img/test1.jpg');"></div>
+            <img src="./img/person1.png" alt="Profile" class="profile-pic">
+            <div class="card-content">
+                <div class="name">Bang Upin</div>
+                <div class="role">Pedagang Asongan</div>
+                <div class="testimonial">
+                    "Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat mahal"
+                </div>
+                <div class="stars">★ ★ ★ ★ ★</div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-image" style="background-image: url('./img/test2.jpg');"></div>
+            <img src="./img/person2.png" alt="Profile" class="profile-pic">
+            <div class="card-content">
+                <div class="name">Ibuk Sukijan</div>
+                <div class="role">Ibu Rumah Tangga</div>
+                <div class="testimonial">
+                    "Makasih Panto, aku sekarang berasa tinggal di apartment karena barang-barang yang terlihat mewah"
+                </div>
+                <div class="stars">★ ★ ★ ★ ★</div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-image" style="background-image: url('./img/test3.jpg');"></div>
+            <img src="./img/person3.png" alt="Profile" class="profile-pic">
+            <div class="card-content">
+                <div class="name">Mpok Ina</div>
+                <div class="role">Karyawan Swasta</div>
+                <div class="testimonial">
+                    "Sangat terjangkau untuk kantong saya yang tidak terlalu banyak"
+                </div>
+                <div class="stars">★ ★ ★ ★ ★</div>
+            </div>
+        </div>
+
+        <!-- Right Arrow -->
+        <div class="arrow">&#8594;</div>
+    </div>
+</section>
+  <!-- footer -->
+   <footer class="footer-section">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+        .footer-section {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8f8f8;
+            padding: 4rem 1rem;
+            color: #4a5568;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            
+        }
+
+        .footer-top {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .footer-brand {
+            flex: 1;
+        }
+
+        .footer-brand .logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 1rem;
+        }
+
+        .footer-brand .description {
+            max-width: 300px;
+            line-height: 1.6;
+                padding: 10px;
+        }
+
+        .footer-links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .footer-links {
+            flex: 1;
+        }
+        
+        .footer-links .link-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #dd6b20;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links ul li a {
+            text-decoration: none;
+            color: #4a5568;
+                padding: 10px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links ul li a:hover {
+            color: #1a202c;
+        }
+
+        .footer-links.social ul li {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .footer-links.social ul li a .social-icon {
+            font-size: 1.25rem;
+            width: 1.5rem;
+            text-align: center;
+        }
+
+        .footer-links.social .link-title {
+            color: #dd6b20;
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer-bottom .copyright {
+            font-size: 0.875rem;
+        }
+
+        .footer-bottom .legal-links {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-bottom .legal-links a {
+            text-decoration: none;
+            color: #4a5568;
+            font-size: 0.875rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom .legal-links a:hover {
+            color: #1a202c;
+        }
+
+        /* Font Awesome for Icons */
+        @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+        /* Responsive design for tablets and desktops */
+        @media (min-width: 768px) {
+            .footer-container {
+                gap: 4rem;
+            }
+
+            .footer-top {
+                flex-direction: row;
+                gap: 4rem;
+                justify-content: space-between;
+            }
+
+            .footer-links-container {
+                flex-direction: row;
+                flex: 2;
+                justify-content: space-between;
+            }
+
+            .footer-bottom {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .footer-bottom .legal-links {
+                flex-direction: row;
+                gap: 1rem;
+            }
+        }
+    </style>
+
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">Panto</div>
+                <p class="description">
+                    The advantage of hiring a workspace with us is that it gives you comfortable service and all-around facilities.
+                </p>
+            </div>
+
+            <div class="footer-links-container">
+                <div class="footer-links">
+                    <h4 class="link-title">Services</h4>
+                    <ul>
+                        <li><a href="#">Email Marketing</a></li>
+                        <li><a href="#">Campaigns</a></li>
+                        <li><a href="#">Branding</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4 class="link-title">Furniture</h4>
+                    <ul>
+                        <li><a href="#">Beds</a></li>
+                        <li><a href="#">Chair</a></li>
+                        <li><a href="#">All</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links social">
+                    <h4 class="link-title">Follow Us</h4>
+                    <ul>
+                        <li><a href="#"><span class="social-icon"><i class="fab fa-facebook-f"style="margin: 5px 5px;"></i></span>Facebook</a></li>
+                        <li><a href="#"><span class="social-icon"><i class="fab fa-twitter" style="margin: 5px 5px;"></i></span>Twitter</a></li>
+                        <li><a href="#"><span class="social-icon"><i class="fab fa-instagram" style="margin: 5px 5px;"></i></span>Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="copyright">Copyright © 2021</div>
+            <div class="legal-links">
+                <a href="#">Terms & Conditions</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+
+</html>

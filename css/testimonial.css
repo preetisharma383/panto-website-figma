@@ -1,0 +1,110 @@
+
+    section.testimonials {
+        padding: 60px 20px;
+        text-align: center;
+    }
+
+    .subtitle {
+        color: #f59e0b;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+    }
+
+    .title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 40px;
+        color: #222;
+    }
+
+    .testimonial-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        position: relative;
+    }
+
+    /* Arrows */
+    .arrow {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: white;
+        box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        cursor: pointer;
+        color: black;
+        position: relative;
+        z-index: 1;
+        transition: background-color 0.3s;
+    }
+
+    .arrow:hover {
+        background-color: #f3f3f3;
+    }
+
+    /* Card styles */
+    .card {
+        width: 300px;
+        border-radius: 20px;
+        background-color: white;
+        box-shadow: 0px 4px 15px rgba(0,0,0,0.1);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .card-image {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .profile-pic {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        border: 4px solid white;
+        position: absolute;
+        top: 170px;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: cover;
+        background-color: #ccc;
+    }
+
+    .card-content {
+        padding: 50px 20px 20px;
+        text-align: center;
+    }
+
+    .name {
+        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+
+    .role {
+        font-size: 13px;
+        color: #888;
+        margin-bottom: 15px;
+    }
+
+    .testimonial {
+        font-size: 14px;
+        color: #555;
+        margin-bottom: 15px;
+        line-height: 1.4;
+    }
+
+    .stars {
+        color: #f59e0b;
+        font-size: 14px;
+        letter-spacing: 2px;
+    }
